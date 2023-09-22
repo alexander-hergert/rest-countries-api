@@ -32,7 +32,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 ## My process
 
 - Add components for HomePage and InnerPage.
-- Create Pages and setup Routes.
+- Create pages and setup routes.
 
 
 ### Built with

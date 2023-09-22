@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
+import InnerPage from "./pages/InnerPage";
 
 const router = createBrowserRouter([
   {
@@ -9,36 +10,12 @@ const router = createBrowserRouter([
     element: <SharedLayout />,
     children: [
       {
-        path: "/",
+        path: "/home",
         element: <HomePage />,
-      },
-      {
-        path: "/destination",
-        // element: <DestinationPage />,
         children: [
           {
             path: ":name",
-            // element: <DestinationInnerPage />,
-          },
-        ],
-      },
-      {
-        path: "/crew",
-        // element: <CrewPage />,
-        children: [
-          {
-            path: ":name",
-            // element: <CrewInnerPage />,
-          },
-        ],
-      },
-      {
-        path: "/technology",
-        // element: <TechnologyPage />,
-        children: [
-          {
-            path: ":name",
-            // element: <TechnologyInnerPage />,
+            element: <InnerPage />,
           },
         ],
       },
