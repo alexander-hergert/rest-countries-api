@@ -36,6 +36,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - SharedLayout/ style an setup menu mobile and desktop view. Setup themes with daisyUI.
 - Create theme slice and add functionality to theme switching in Menu.
 - Add menu button animation.
+- Add Search and Filter views for mobile and desktop.
 
 ### Built with
 

@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <SharedLayout />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <HomePage />,
         children: [
           {
