@@ -69,3 +69,15 @@ export const shake = {
     duration: 0.25,
   },
 };
+
+export const spin = {
+  animationLeft: {
+    rotate: [0, -360],
+  },
+  animationRight: {
+    rotate: [0, 360],
+  },
+  duration: {
+    duration: 0.5,
+  },
+};
