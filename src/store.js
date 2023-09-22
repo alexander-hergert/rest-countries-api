@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todosSlice from "./slices/todosSlice";
+import themeSlice from "./slices/themeSlice";
 import { apiSlice } from "./api/apiSlice";
 
 //Example store and slices
 const store = configureStore({
   reducer: {
-    todos: todosSlice.reducer,
+    themes: themeSlice.reducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -14,7 +14,7 @@ const store = configureStore({
 
 store.subscribe(() => {
   const state = store.getState();
-  localStorage.setItem("todos", JSON.stringify(state.todos));
+  localStorage.setItem("theme", JSON.stringify(state.themes));
 });
 
 export default store;

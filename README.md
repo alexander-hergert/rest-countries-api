@@ -33,7 +33,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 - Add components for HomePage and InnerPage.
 - Create pages and setup routes.
-- SharedLayout/ style an setup menu mobile and desktop view.
+- SharedLayout/ style an setup menu mobile and desktop view. Setup themes with daisyUI.
+- Create theme slice and add functionality to theme switching in Menu.
 
 ### Built with
 

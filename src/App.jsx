@@ -1,16 +1,15 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes";
-import { Provider } from "react-redux";
-import store from "./store";
+import { useSelector } from "react-redux";
 
 function App() {
+  const theme = useSelector((state) => state.themes);
+
   return (
-    <Provider store={store}>
-      <main data-theme="light">
-        <RouterProvider router={router} />
-      </main>
-    </Provider>
+    <main data-theme={theme}>
+      <RouterProvider router={router} />
+    </main>
   );
 }
 
