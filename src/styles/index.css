@@ -11,14 +11,6 @@
   }
 }
 
-.colors {
-  color: hsl(209, 23%, 22%);
-  color: hsl(207, 26%, 17%);
-  color: hsl(200, 15%, 8%);
-  color: hsl(0, 0%, 52%);
-  color: hsl(0, 0%, 98%);
-}
-
 * {
   box-sizing: border-box;
 }

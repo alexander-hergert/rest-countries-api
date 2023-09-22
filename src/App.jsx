@@ -6,11 +6,11 @@ import store from "./store";
 
 function App() {
   return (
-    <>
-      <Provider store={store}>
+    <Provider store={store}>
+      <main data-theme="light">
         <RouterProvider router={router} />
-      </Provider>
-    </>
+      </main>
+    </Provider>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const InnerPage = () => {
-  return <div>InnerPage</div>;
+  return <section>InnerPage</section>;
 };
 
 export default InnerPage;

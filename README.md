@@ -23,7 +23,7 @@ Your users should be able to:
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+- Toggle the color scheme between light and dark mode _(optional)_
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
@@ -33,11 +33,9 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 - Add components for HomePage and InnerPage.
 - Create pages and setup routes.
-
+- SharedLayout/ style an setup menu mobile and desktop view.
 
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-
-
