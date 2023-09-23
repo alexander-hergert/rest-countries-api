@@ -1,5 +1,4 @@
 import React from "react";
-import { FaFaceLaughSquint } from "react-icons/fa6";
 
 const View = ({ flags, name }) => {
   return (

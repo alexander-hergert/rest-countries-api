@@ -53,6 +53,7 @@ const Infos = ({
           <p>
             <span className="font-bold">Languages: &nbsp;</span>
             {languagesArray.map((lang) => languages[lang]).join(", ")}
+            {/*sort*/}
           </p>
         </div>
       </div>

@@ -43,6 +43,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Style and link the Back button.
 - Style the View and add flag image.
 - Style the Infos and parent elements.
+- Add Borderlands and Borderland component and link them.
 
 ### Built with
 
