@@ -40,6 +40,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add Filterbox and setup reducer filterSlice.
 - Add cards views and card styling. Fetching data.
 - Add loader to inner page and style the InnerPage basically.
+- Style and link the Back button.
 
 ### Built with
 

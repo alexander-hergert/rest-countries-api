@@ -3,12 +3,11 @@ import Back from "../components/Back";
 import View from "../components/View";
 import Infos from "../components/Infos";
 import Borderland from "../components/Borderland";
-import { useLoaderData } from "react-router-dom";
 
 const InnerPage = () => {
 
   return (
-    <section>
+    <section className="p-5 px-10">
       <Back />
       <article>
         <View />
