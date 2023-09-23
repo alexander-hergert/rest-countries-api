@@ -38,6 +38,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add menu button animation.
 - Add Search and Filter views for mobile and desktop.
 - Add Filterbox and setup reducer filterSlice.
+- Add cards views and card styling. Fetching data.
 
 ### Built with
 

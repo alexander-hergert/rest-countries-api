@@ -35,7 +35,7 @@ const Filter = () => {
             Africa
           </li>
           <li onClick={handleSelectFilter} className="cursor-pointer">
-            America
+            Americas
           </li>
           <li onClick={handleSelectFilter} className="cursor-pointer">
             Asia

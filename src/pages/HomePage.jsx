@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "../components/Search";
 import Filter from "../components/Filter";
-import { useGetPostsQuery } from "../api/apiSlice";
+import Cards from "../components/Cards";
+
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
         <Search />
         <Filter />
       </section>
+      <Cards />
     </section>
   );
 };

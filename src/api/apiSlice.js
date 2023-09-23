@@ -2,11 +2,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://restcountries.com/v3.1" }),
   endpoints: (builder) => ({
     getPosts: builder.query({
-      query: () => "/products",
-      staleTime: 1000 * 60 * 5,
+      query: () => "/all",
+      staleTime: 1000 * 60 * 60, //1 hour
     }),
     // Mutation endpoint to create a new post
     createPost: builder.mutation({
