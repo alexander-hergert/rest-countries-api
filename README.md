@@ -42,6 +42,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add loader to inner page and style the InnerPage basically.
 - Style and link the Back button.
 - Style the View and add flag image.
+- Style the Infos and parent elements.
 
 ### Built with
 
