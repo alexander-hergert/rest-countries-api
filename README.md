@@ -37,6 +37,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Create theme slice and add functionality to theme switching in Menu.
 - Add menu button animation.
 - Add Search and Filter views for mobile and desktop.
+- Add Filterbox and setup reducer filterSlice.
 
 ### Built with
 

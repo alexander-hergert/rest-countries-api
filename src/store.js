@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeSlice from "./slices/themeSlice";
+import filterSlice from "./slices/filterSlice";
 import { apiSlice } from "./api/apiSlice";
 
-//Example store and slices
 const store = configureStore({
   reducer: {
     themes: themeSlice.reducer,
+    filters: filterSlice.reducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -15,6 +16,7 @@ const store = configureStore({
 store.subscribe(() => {
   const state = store.getState();
   localStorage.setItem("theme", JSON.stringify(state.themes));
+  localStorage.setItem("filter", JSON.stringify(state.filters));
 });
 
 export default store;

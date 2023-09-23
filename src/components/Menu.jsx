@@ -1,8 +1,7 @@
 import React from "react";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
-import { useDispatch } from "react-redux";
 import { changeTheme } from "../slices/themeSlice";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { spin } from "../animations";
 
