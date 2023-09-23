@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ flags, name, capital, population, region }) => {
   return (
@@ -7,7 +8,9 @@ const Card = ({ flags, name, capital, population, region }) => {
         <img className="w-full]" src={flags.png} alt={name.common} />
       </div>
       <div className="p-5">
-        <h2 className="text-xl font-bold my-5">{name.common}</h2>
+        <h2 className="text-xl font-bold my-5">
+          <Link to={`/countries/${name.common}`}>{name.common}</Link>
+        </h2>
         <p className="text-lg">
           <span className="font-bold">Population: </span>
           {population}

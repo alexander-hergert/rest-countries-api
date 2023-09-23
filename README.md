@@ -39,6 +39,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add Search and Filter views for mobile and desktop.
 - Add Filterbox and setup reducer filterSlice.
 - Add cards views and card styling. Fetching data.
+- Add loader to inner page and style the InnerPage basically.
 
 ### Built with
 
