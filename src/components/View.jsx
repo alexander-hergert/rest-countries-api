@@ -1,7 +1,14 @@
 import React from "react";
+import { FaFaceLaughSquint } from "react-icons/fa6";
 
-const View = () => {
-  return <div>View</div>;
+
+const View = ({flags, name}) => {
+
+  return (
+    <article>
+      <img src={flags.png} alt={name.common} />
+    </article>
+  );
 };
 
 export default View;
