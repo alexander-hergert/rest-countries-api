@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { changeFilter } from "../slices/filterSlice";
+import { initial, addFilter } from "../slices/filteredDataSlice";
 
 const Filter = () => {
   const [openFilter, setOpenFilter] = useState(false);
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filters);
+  const data = useSelector((state) => state.data);
 
   const handleSelectFilter = (e) => {
     dispatch(changeFilter(e.target.textContent));
-    console.log(filter);
   };
+
+  useEffect(() => {
+    dispatch(initial(data));
+    dispatch(addFilter(filter));
+  }, [filter]);
 
   const handleOpenFilters = () => {
     setOpenFilter(!openFilter);
@@ -41,7 +47,7 @@ const Filter = () => {
             Asia
           </li>
           <li onClick={handleSelectFilter} className="cursor-pointer">
-            Europa
+            Europe
           </li>
           <li onClick={handleSelectFilter} className="cursor-pointer">
             Oceania

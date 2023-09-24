@@ -44,6 +44,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Style the View and add flag image.
 - Style the Infos and parent elements.
 - Add Borderlands and Borderland component and link them.
+- Add fetchedData (all countries) as state. Create dataSlice.js.
+- Create filtered by region.
 - Create filtered searching.
 
 ### Built with

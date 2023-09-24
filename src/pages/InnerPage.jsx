@@ -4,9 +4,13 @@ import View from "../components/View";
 import Infos from "../components/Infos";
 import Borderlands from "../components/Borderlands";
 import { useLoaderData } from "react-router-dom";
+import { changeFilter } from "../slices/filterSlice";
+import { useDispatch } from "react-redux";
 
 const InnerPage = () => {
   const [data] = useLoaderData();
+  const dispatch = useDispatch();
+  dispatch(changeFilter("")); //Reset Filter when moving to InnerPage
 
   return (
     <section className="p-5 px-10 min-h-[100vh]">
