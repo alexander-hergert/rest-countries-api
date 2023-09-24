@@ -1,16 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeSlice from "./slices/themeSlice";
 import filterSlice from "./slices/filterSlice";
-import { apiSlice } from "./api/apiSlice";
+import { apiCountrySlice } from "./api/apiCountrySlice";
 
 const store = configureStore({
   reducer: {
     themes: themeSlice.reducer,
     filters: filterSlice.reducer,
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    [apiCountrySlice.reducerPath]: apiCountrySlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
+    getDefaultMiddleware().concat(apiCountrySlice.middleware),
 });
 
 store.subscribe(() => {

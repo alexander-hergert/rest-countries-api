@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function FetchData(url) {
+function useFetchData(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,4 +27,4 @@ function FetchData(url) {
   return { data, loading, error };
 }
 
-export default FetchData;
+export default useFetchData;

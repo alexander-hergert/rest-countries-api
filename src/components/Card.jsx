@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ flags, name, capital, population, region }) => {
   return (
-    <article className="h-[25rem] md:self-start m-5 bg-neutral rounded overflow-hidden">
+    <article className="h-[25rem] md:self-start m-5 bg-neutral rounded overflow-hidden shadow">
       <div>
         <Link to={`/${name.common}`}>
           <img className="w-full]" src={flags.png} alt={name.common} />

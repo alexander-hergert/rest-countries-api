@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useFetchData from "../customHooks/useFetchData";
+import { useGetBorderQuery } from "../api/apiCountrySlice";
 
 const Borderland = ({ borderland }) => {
-  const { data } = useFetchData(
-    `https://restcountries.com/v3.1/alpha/${borderland}`
-  );
+  const { data, isLoading, isError } = useGetBorderQuery(borderland);
 
-  if (data !== null) {
+  if (data) {
     const [name] = data;
 
     return (
