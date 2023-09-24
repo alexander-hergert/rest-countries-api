@@ -44,6 +44,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Style the View and add flag image.
 - Style the Infos and parent elements.
 - Add Borderlands and Borderland component and link them.
+- Create filtered searching.
 
 ### Built with
 

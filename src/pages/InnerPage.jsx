@@ -7,7 +7,7 @@ import { useLoaderData } from "react-router-dom";
 
 const InnerPage = () => {
   const [data] = useLoaderData();
-  console.log(data);
+
   return (
     <section className="p-5 px-10 min-h-[100vh]">
       <Back />

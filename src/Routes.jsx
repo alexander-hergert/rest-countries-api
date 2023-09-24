@@ -14,18 +14,12 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/countries",
+        path: "/:name",
         element: <InnerPage />,
         errorElement: <ErrorPage />,
         loader: async ({ params }) => {
           return fetch(`https://restcountries.com/v3.1/name/${params.name}`);
         },
-        children: [
-          {
-            path: ":name",
-            element: <InnerPage />,
-          },
-        ],
       },
       {
         path: "*",
