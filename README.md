@@ -46,7 +46,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add Borderlands and Borderland component and link them.
 - Add fetchedData (all countries) as state. Create dataSlice.js.
 - Create filtered by region.
-- Create filtered searching.
+- Create filtered searching. Filter the countries and submit country name.
 
 ### Built with
 

@@ -3,7 +3,14 @@ import Card from "../components/Card";
 import { useGetCountriesQuery } from "../api/apiCountrySlice";
 import { useSelector, useDispatch } from "react-redux";
 import { loadCountries } from "../slices/dataSlice";
-import { initial, addFilter } from "../slices/filteredDataSlice";
+import {
+  initial as initialFilter,
+  addFilter,
+} from "../slices/filteredDataSlice";
+import {
+  initial as initialSearch,
+  searchFilter,
+} from "../slices/searchDataSlice";
 
 const Cards = ({ loaderData }) => {
   const { data, isLoading, isError } = useGetCountriesQuery();
@@ -12,11 +19,12 @@ const Cards = ({ loaderData }) => {
   useEffect(() => {
     if (data) {
       dispatch(loadCountries(data));
-      dispatch(initial(loaderData ? loaderData : data));
+      dispatch(initialFilter(loaderData ? loaderData : data));
+      dispatch(initialSearch(loaderData ? loaderData : data));
     }
   }, [data]);
 
-  const countries = useSelector((state) => state.filteredData);
+  const countries = useSelector((state) => state.searchedData);
 
   return (
     <section
