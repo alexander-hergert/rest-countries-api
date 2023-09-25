@@ -10,7 +10,7 @@ const Borderland = ({ borderland }) => {
 
     return (
       <div className="p-2 text-center rounded bg-neutral w-[8rem]">
-        <Link to={`/${name.name.common}`}>{name.name.common}</Link>
+        <Link to={`/country/${name.name.common}`}>{name.name.common}</Link>
       </div>
     );
   }

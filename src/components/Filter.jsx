@@ -3,16 +3,26 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { changeFilter } from "../slices/filterSlice";
 import { initial, addFilter } from "../slices/filteredDataSlice";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Filter = () => {
   const [openFilter, setOpenFilter] = useState(false);
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filters);
   const data = useSelector((state) => state.data);
+  const navigate = useNavigate();
+  const params = useParams();
 
   const handleSelectFilter = (e) => {
     dispatch(changeFilter(e.target.textContent));
+    navigate(`/${e.target.textContent}`);
   };
+
+  useEffect(() => {
+    if (!filter && params.region) {
+      dispatch(changeFilter(params.region));
+    }
+  }, []);
 
   useEffect(() => {
     dispatch(initial(data));

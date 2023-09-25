@@ -8,6 +8,9 @@ const filteredDataSlice = createSlice({
       return (state = action.payload);
     },
     addFilter: (state, action) => {
+      if (action.payload === "") {
+        return state;
+      }
       return state.filter((item) => item.region === action.payload);
     },
   },

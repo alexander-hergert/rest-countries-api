@@ -5,22 +5,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { loadCountries } from "../slices/dataSlice";
 import { initial, addFilter } from "../slices/filteredDataSlice";
 
-const Cards = () => {
+const Cards = ({ loaderData }) => {
   const { data, isLoading, isError } = useGetCountriesQuery();
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (data) {
       dispatch(loadCountries(data));
-      dispatch(initial(data));
+      dispatch(initial(loaderData ? loaderData : data));
     }
   }, [data]);
-  
-  //const filter = useSelector((state) => state.filters);
-  //Makes the filter stay when navigating back: optional
-  // useEffect(() => {
-  //   dispatch(addFilter(filter));
-  // }, []);
 
   const countries = useSelector((state) => state.filteredData);
 
