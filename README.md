@@ -47,6 +47,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Add fetchedData (all countries) as state. Create dataSlice.js.
 - Create filtered by region.
 - Create filtered searching. Filter the countries and submit country name.
+- Design ErrorPage and catch existing errors.
 
 ### Built with
 
