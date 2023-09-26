@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo } from "react";
 import Card from "../components/Card";
+import CardPlaceholder from "../components/CardPlaceholder";
 import { useGetCountriesQuery } from "../api/apiCountrySlice";
 import { useSelector, useDispatch } from "react-redux";
 import { loadCountries } from "../slices/dataSlice";
 import ErrorPage from "../pages/ErrorPage";
 import { useLocation } from "react-router-dom";
-import Loader from "../components/Loader";
 
 import {
   initial as initialFilter,
@@ -35,25 +35,43 @@ const Cards = ({ loaderData }) => {
 
   const countries = useSelector((state) => state.searchedData);
 
+  //create placeholder array
   if (isLoading) {
-    return <Loader />;
-  }
+    const placeholderCountires = [];
+    for (let i = 0; i < 250; i++) {
+      placeholderCountires.push({ src: `/images/white-flag.svg` });
+    }
 
-  try {
     return (
       <section
         className="mt-10 rounded flex flex-col 
     items-center justify-center md:flex-row flex-wrap"
       >
-        {countries?.map((item) => (
-          <Card key={item?.name?.common} {...item} />
+        {placeholderCountires?.map((placeholder, i) => (
+          <CardPlaceholder key={i} {...placeholder} />
         ))}
+        ;
       </section>
     );
-  } catch (error) {
-    if (countries?.status === 404) {
-      console.log("This path does not exist!");
-      return <ErrorPage />;
+  }
+
+  if (!isLoading) {
+    try {
+      return (
+        <section
+          className="mt-10 rounded flex flex-col 
+    items-center justify-center md:flex-row flex-wrap"
+        >
+          {countries?.map((item) => (
+            <Card key={item?.name?.common} {...item} />
+          ))}
+        </section>
+      );
+    } catch (error) {
+      if (countries?.status === 404) {
+        console.log("This path does not exist!");
+        return <ErrorPage />;
+      }
     }
   }
 };

@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 
 const Card = ({ flags, name, capital, population, region }) => {
   return (
-    <article className="h-[25rem] md:self-start m-5 bg-neutral rounded overflow-hidden shadow">
+    <article
+      className="h-[25rem] md:self-start m-5 bg-neutral rounded 
+    overflow-hidden shadow w-[20rem]"
+    >
       <div>
         <Link to={`/country/${name.common}`}>
-          <img className="w-full]" src={flags.png} alt={name.common} />
+          <img className="w-full" src={flags.svg} alt={name.common} />
         </Link>
       </div>
       <div className="p-5">

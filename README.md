@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
+![Design preview for the REST Countries API with color theme switcher coding challenge](/public/images/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -48,6 +48,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Create filtered by region.
 - Create filtered searching. Filter the countries and submit country name.
 - Design ErrorPage and catch existing errors.
+- Create PlaceholderCards for fetching.
 
 ### Built with
 
