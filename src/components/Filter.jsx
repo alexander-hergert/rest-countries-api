@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeFilter } from "../slices/filterSlice";
 import { initial, addFilter } from "../slices/filteredDataSlice";
 import { useNavigate, useParams } from "react-router-dom";
+import FilterListItem from "./FilterListItem";
 
 const Filter = () => {
   const [openFilter, setOpenFilter] = useState(false);
@@ -33,35 +34,32 @@ const Filter = () => {
     setOpenFilter(!openFilter);
   };
 
+  const list = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
   return (
-    <div className="max-md:mt-10 relative">
+    <div className="max-md:mt-10 relative shadow max-md:w-[60%] md:min-w-[10rem]">
       <div
         onClick={handleOpenFilters}
         className="flex cursor-pointer justify-between items-center bg-neutral 
-      p-5 px-10 text-lg rounded"
+      p-5 pl-10 text-md rounded"
       >
-        <div>Filter by Region</div>
+        <div>{params.region || "Filter by Region"}</div>
         <div>
-          <RiArrowDropDownLine className="text-4xl" />
+          <RiArrowDropDownLine className="text-2xl" />
         </div>
       </div>
       {openFilter && (
-        <menu className="bg-neutral mt-1 p-5 px-10 text-lg rounded absolute w-full">
-          <li onClick={handleSelectFilter} className="cursor-pointer">
-            Africa
-          </li>
-          <li onClick={handleSelectFilter} className="cursor-pointer">
-            Americas
-          </li>
-          <li onClick={handleSelectFilter} className="cursor-pointer">
-            Asia
-          </li>
-          <li onClick={handleSelectFilter} className="cursor-pointer">
-            Europe
-          </li>
-          <li onClick={handleSelectFilter} className="cursor-pointer">
-            Oceania
-          </li>
+        <menu
+          className="bg-neutral mt-1 p-5 px-10 text-md rounded 
+        absolute w-full shadow-2xl"
+        >
+          {list.map((item) => (
+            <FilterListItem
+              key={item}
+              item={item}
+              handleSelectFilter={handleSelectFilter}
+            />
+          ))}
         </menu>
       )}
     </div>

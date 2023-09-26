@@ -49,6 +49,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - Create filtered searching. Filter the countries and submit country name.
 - Design ErrorPage and catch existing errors.
 - Create PlaceholderCards for fetching.
+- Finish styling of components and make them look closer to the desgin. Add accessibility and seo optimizations.
+- Add simple animations.
 
 ### Built with
 

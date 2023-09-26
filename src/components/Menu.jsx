@@ -20,7 +20,7 @@ const Menu = () => {
   const variants = spin;
 
   return (
-    <nav className="flex justify-between p-10">
+    <nav className="flex justify-between p-10 md:px-20">
       <h1 className="font-bold text-2xl">Where in the world?</h1>
       <div className="flex items-center gap-2">
         <motion.div
@@ -42,7 +42,7 @@ const Menu = () => {
             />
           )}
         </motion.div>
-        <h2>Dark Mode</h2>
+        <h2 className="font-bold">Dark Mode</h2>
       </div>
     </nav>
   );

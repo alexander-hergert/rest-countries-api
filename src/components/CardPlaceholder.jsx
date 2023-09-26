@@ -7,23 +7,8 @@ const CardPlaceholder = ({ src }) => {
     md:self-start m-5 bg-neutral rounded overflow-hidden shadow"
     >
       <div className="p-5">
-        <img className="w-full" src={src} alt={src} />
+        <img className="w-full" src={src} alt={src} loading="lazy" />
       </div>
-      {/* <div className="p-5">
-        <h2 className="text-xl font-bold my-5">...Loading</h2>
-        <p className="text-lg">
-          <span className="font-bold">Population: </span>
-          ...Loading
-        </p>
-        <p className="text-lg">
-          <span className="font-bold">Region: </span>
-          ...Loading
-        </p>
-        <p className="text-lg">
-          <span className="font-bold">Capital: </span>
-          ...Loading
-        </p>
-      </div> */}
     </article>
   );
 };

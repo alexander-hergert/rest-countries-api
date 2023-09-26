@@ -25,16 +25,18 @@ const Search = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-5 p-5 bg-neutral
-     rounded max-md:w-full"
+      className="flex items-center gap-5 p-5 px-10 bg-neutral
+     rounded max-md:w-full shadow"
     >
-      <button>
-        <FaMagnifyingGlass className="cursor-pointer" />
+      <button aria-label="Search">
+        <FaMagnifyingGlass
+          className="cursor-pointer
+         text-xl text-slate-400"
+        />
       </button>
-
       <input
         onChange={handleOnChange}
-        className="bg-neutral"
+        className="bg-neutral outline-none"
         type="text"
         required
         name=""

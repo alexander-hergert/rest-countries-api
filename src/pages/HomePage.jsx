@@ -8,7 +8,7 @@ const HomePage = () => {
   const loaderData = useLoaderData(); //region
 
   return (
-    <section className="py-5 px-10">
+    <section className="py-5 px-10 md:px-20">
       <section className="md:flex justify-between">
         <Search />
         <Filter />
