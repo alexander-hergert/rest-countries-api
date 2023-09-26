@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import Card from "../components/Card";
 import { useGetCountriesQuery } from "../api/apiCountrySlice";
 import { useSelector, useDispatch } from "react-redux";
 import { loadCountries } from "../slices/dataSlice";
 import ErrorPage from "../pages/ErrorPage";
 import { useLocation } from "react-router-dom";
+import Loader from "../components/Loader";
 
 import {
   initial as initialFilter,
@@ -16,7 +17,11 @@ import {
 } from "../slices/searchDataSlice";
 
 const Cards = ({ loaderData }) => {
-  const { data, isLoading, isError } = useGetCountriesQuery();
+  const queryKey = useMemo(() => {
+    return ["getCountries", loaderData];
+  }, [loaderData]);
+
+  const { data, isLoading, isError } = useGetCountriesQuery(queryKey);
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -29,6 +34,10 @@ const Cards = ({ loaderData }) => {
   }, [data, location]);
 
   const countries = useSelector((state) => state.searchedData);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   try {
     return (

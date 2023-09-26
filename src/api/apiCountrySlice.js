@@ -12,7 +12,15 @@ export const apiCountrySlice = createApi({
       query: (borderland) => `/alpha/${borderland}`,
       staleTime: 1000 * 60 * 60, //1 hour
     }),
+    getBorderCountries: builder.query({
+      query: (...countrycode) => `/alpha?codes=${countrycode}`,
+      staleTime: 1000 * 60 * 60, //1 hour
+    }),
   }),
 });
 
-export const { useGetCountriesQuery, useGetBorderQuery } = apiCountrySlice;
+export const {
+  useGetCountriesQuery,
+  useGetBorderQuery,
+  useGetBorderCountriesQuery,
+} = apiCountrySlice;
