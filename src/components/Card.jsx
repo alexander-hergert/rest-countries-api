@@ -1,16 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeUp } from "../animations";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ flags, name, capital, population, region }) => {
+const Card = ({ flags, name, capital, population, region, index }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/country/${name.official}`);
+  };
+
   return (
-    <article
-      className="h-[30rem] md:self-start m-5 bg-neutral rounded 
-    overflow-hidden shadow-xl w-[25rem]"
+    <motion.article
+      onClick={handleClick}
+      initial={fadeUp.hidden}
+      whileInView={fadeUp.visible}
+      transition={{ delay: (index % 4) / 10, duration: 0.25 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.1 }}
+      className="h-[23rem] md:self-start my-5 bg-neutral rounded 
+    overflow-hidden shadow-xl w-[18rem] max-md:h-[25rem] max-md:w-[20rem]"
     >
       <div>
-        <Link to={`/country/${name.common}`}>
+        <Link to={`/country/${name.official}`}>
           <img
-            className="w-full shadow h-[15rem]"
+            className="w-full shadow h-[10rem]"
             src={flags.png}
             alt={name.common}
             loading="lazy"
@@ -34,7 +49,7 @@ const Card = ({ flags, name, capital, population, region }) => {
           {capital}
         </p>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

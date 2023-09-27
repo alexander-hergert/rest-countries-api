@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
-import Card from "../components/Card";
-import CardPlaceholder from "../components/CardPlaceholder";
+import Card from "./Card";
+import CardPlaceholder from "./CardPlaceholder";
 import { useGetCountriesQuery } from "../api/apiCountrySlice";
 import { useSelector, useDispatch } from "react-redux";
 import { loadCountries } from "../slices/dataSlice";
@@ -45,7 +45,7 @@ const Cards = ({ loaderData }) => {
     return (
       <section
         className="mt-10 rounded flex flex-col 
-    items-center justify-center md:flex-row flex-wrap"
+    items-center justify-between md:flex-row flex-wrap"
       >
         {placeholderCountires?.map((placeholder, i) => (
           <CardPlaceholder key={i} {...placeholder} />
@@ -59,11 +59,11 @@ const Cards = ({ loaderData }) => {
     try {
       return (
         <section
-          className="mt-10 rounded flex flex-col 
-    items-center justify-center md:flex-row flex-wrap"
+          className="mt-5 rounded flex flex-col 
+    items-center justify-between md:flex-row flex-wrap gap-2"
         >
-          {countries?.map((item) => (
-            <Card key={item?.name?.common} {...item} />
+          {countries?.map((item, i) => (
+            <Card key={item?.name?.common} {...item} index={i} />
           ))}
         </section>
       );

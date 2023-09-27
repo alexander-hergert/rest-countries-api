@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import ErrorPage from "./ErrorPage";
 
 const InnerPage = () => {
+  window.scrollTo(0, 0);
   let data;
 
   try {
@@ -25,9 +26,9 @@ const InnerPage = () => {
   }, []);
 
   return (
-    <section className="p-5 px-10 min-h-[100vh] text-[16px]">
+    <section className="p-5 px-10 min-h-[100vh] text-[16px] lg:px-20 xl:px-40 2xl:px-60">
       <Back />
-      <article className="md:flex gap-5 items-center justify-around mt-10">
+      <article className="md:flex gap-10 items-center justify-between mt-20">
         <View {...data} />
         <div>
           <Infos {...data} />

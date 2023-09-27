@@ -9,11 +9,11 @@ const Borderlands = ({ borders }) => {
     );
 
     return (
-      <div className="md:flex items-center gap-10">
-        <h2 className="font-bold mt-10">Border Countries:</h2>
-        <div className="flex flex-wrap gap-5 mt-10 min-w-[20rem] max-w-[30rem]">
-          {data?.map((borderland) => (
-            <Borderland key={borderland.name.common} borderland={borderland} />
+      <div className="md:flex items-center gap-10 md:flex-col lg:flex-row">
+        <h2 className="font-bold mt-10 md:self-start lg:self-center">Border Countries:</h2>
+        <div className="flex flex-wrap gap-5 mt-5 min-w-[20rem] max-w-[30rem]">
+          {data?.map((borderland, i) => (
+            <Borderland key={borderland.name.common} borderland={borderland} index={i}/>
           ))}
         </div>
       </div>

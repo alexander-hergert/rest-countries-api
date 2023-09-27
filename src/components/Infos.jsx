@@ -14,9 +14,9 @@ const Infos = ({
   const languagesArray = Object.keys(languages);
 
   return (
-    <article className="min-w-[20rem]">
+    <article className="min-w-[20rem] mt-10 md:mt-0">
       <h2 className="font-bold text-2xl max-md:my-5">{name.common}</h2>
-      <div className="md:flex gap-10">
+      <div className="md:flex gap-10 mt-10 md:flex-wrap md:flex-col lg:flex-row">
         <div>
           <p>
             <span className="font-bold">Native Name: </span>

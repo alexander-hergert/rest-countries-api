@@ -11,14 +11,12 @@ export const fadeIn = {
 
 export const fadeUp = {
   hidden: {
-    y: 100,
+    y: 10,
     opacity: 0,
-    transition: { duration: 1 },
   },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1 },
   },
 };
 
