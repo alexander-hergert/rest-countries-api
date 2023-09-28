@@ -7,7 +7,7 @@ const View = ({ flags, name }) => {
     <motion.article
       initial={fadeLeft.hidden}
       animate={fadeLeft.visible}
-      className="w-full max-w-[40rem] min-w-[25rem] shadow-2xl max-sm:min-w-[15rem]"
+      className="w-full max-w-[40rem] min-w-[20rem] shadow-2xl max-sm:min-w-[15rem]"
     >
       <img className="w-full" src={flags.svg} alt={name.common} />
     </motion.article>

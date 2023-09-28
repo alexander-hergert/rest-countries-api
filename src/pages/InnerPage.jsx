@@ -26,9 +26,9 @@ const InnerPage = () => {
   }, []);
 
   return (
-    <section className="p-5 px-10 min-h-[100vh] text-[16px] lg:px-20 xl:px-40 2xl:px-60">
+    <section className="p-5 px-10 min-h-[85vh] text-[16px] lg:px-20 xl:px-40 2xl:px-60 text-primary">
       <Back />
-      <article className="md:flex gap-10 items-center justify-between mt-20">
+      <article className="md:flex gap-20 items-center justify-between mt-20">
         <View {...data} />
         <div>
           <Infos {...data} />

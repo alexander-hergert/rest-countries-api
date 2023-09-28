@@ -37,11 +37,11 @@ const Filter = () => {
   const list = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   return (
-    <div className="max-md:mt-10 relative shadow max-md:w-[60%] md:min-w-[10rem]">
+    <div className="max-md:mt-10 relative shadow max-md:w-[60%] md:min-w-[10rem] text-primary self-end">
       <div
         onClick={handleOpenFilters}
         className="flex cursor-pointer justify-between items-center bg-neutral 
-      p-5 pl-10 text-md rounded"
+      p-3 pl-10 text-md rounded"
       >
         <div>{params.region || "Filter by Region"}</div>
         <div>

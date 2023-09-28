@@ -27,15 +27,15 @@ const Search = () => {
 
   const handleResetInput = (e) => {
     e.target.parentNode[1].value = "";
-
     setSearchTerm("");
+    dispatch(initial(filteredData));
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-5 p-5 px-10 bg-neutral
-     rounded max-md:w-full shadow"
+      className="flex items-center gap-5 p-3 px-10 bg-neutral
+     rounded max-md:w-full md:w-[30vw] shadow self-start"
     >
       <button aria-label="Search">
         <FaMagnifyingGlass
@@ -45,7 +45,7 @@ const Search = () => {
       </button>
       <input
         onChange={handleOnChange}
-        className="bg-neutral outline-none"
+        className="bg-neutral outline-none w-full"
         type="text"
         required
         name=""
@@ -53,7 +53,10 @@ const Search = () => {
         placeholder="Search for a country..."
       />
       {searchTerm && (
-        <AiOutlineClose className="cursor-pointer" onClick={handleResetInput} />
+        <AiOutlineClose
+          className="cursor-pointer text-2xl"
+          onClick={handleResetInput}
+        />
       )}
     </form>
   );

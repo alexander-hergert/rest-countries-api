@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
 import { changeTheme } from "../slices/themeSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { spin } from "../animations";
+import { loadDataFromLocalStorage } from "../utils";
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -17,10 +18,14 @@ const Menu = () => {
     }
   };
 
+  useEffect(() => {
+    dispatch(changeTheme(loadDataFromLocalStorage("theme")));
+  }, []);
+
   const variants = spin;
 
   return (
-    <nav className="flex justify-between p-5 md:px-[7rem] bg-neutral shadow mb-5">
+    <nav className="flex justify-between p-5 bg-neutral shadow mb-5 text-primary md:px-[5%] 2xl:px-[10%]">
       <h1 className="font-bold text-2xl">Where in the world?</h1>
       <div className="flex items-center gap-2">
         <motion.div

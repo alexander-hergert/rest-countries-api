@@ -34,18 +34,24 @@ const Cards = ({ loaderData }) => {
   }, [data, location]);
 
   const countries = useSelector((state) => state.searchedData);
+  const theme = useSelector((state => state.themes))
+  console.log(theme);
 
   //create placeholder array
   if (isLoading) {
     const placeholderCountires = [];
     for (let i = 0; i < 250; i++) {
-      placeholderCountires.push({ src: `/images/white-flag.svg` });
+      if ((theme === "light")) {
+        placeholderCountires.push({ src: `/images/white-flag.svg` });
+      } else {
+        placeholderCountires.push({ src: `/images/white-flag-2.svg` });
+      }
     }
 
     return (
       <section
-        className="mt-10 rounded flex flex-col 
-    items-center justify-between md:flex-row flex-wrap"
+        className="mt-10 rounded flex flex-col items-center md:flex-row flex-wrap 
+    md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 xl:gap-[3rem] justify-items-center"
       >
         {placeholderCountires?.map((placeholder, i) => (
           <CardPlaceholder key={i} {...placeholder} />
@@ -59,8 +65,8 @@ const Cards = ({ loaderData }) => {
     try {
       return (
         <section
-          className="mt-5 rounded flex flex-col 
-    items-center justify-between md:flex-row flex-wrap gap-2"
+          className="mt-10 rounded flex flex-col items-center md:flex-row flex-wrap 
+    md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 xl:gap-[3rem] justify-items-center"
         >
           {countries?.map((item, i) => (
             <Card key={item?.name?.common} {...item} index={i} />

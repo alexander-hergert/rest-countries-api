@@ -19,20 +19,21 @@ const Card = ({ flags, name, capital, population, region, index }) => {
       transition={{ delay: (index % 4) / 10, duration: 0.25 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.1 }}
-      className="h-[23rem] md:self-start my-5 bg-neutral rounded 
-    overflow-hidden shadow-xl w-[18rem] max-md:h-[25rem] max-md:w-[20rem]"
+      className="max-md:my-5 md:self-start bg-neutral rounded 
+    overflow-hidden shadow-xl max-sm:h-[25rem] max-sm:w-[20rem] max-md:w-[25rem] cursor-pointer w-full min-w-[15rem]
+    md:h-[28rem] lg:h-[26rem] xl:h-[24rem]"
     >
       <div>
         <Link to={`/country/${name.official}`}>
           <img
-            className="w-full shadow h-[10rem]"
+            className="w-full shadow md:h-[14rem] lg:h-[13rem] xl:h-[12rem]"
             src={flags.png}
             alt={name.common}
             loading="lazy"
           />
         </Link>
       </div>
-      <div className="p-5 px-10">
+      <div className="p-2 px-5">
         <h2 className="text-xl font-bold my-5">
           <Link to={`/country/${name.common}`}>{name.common}</Link>
         </h2>

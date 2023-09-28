@@ -14,9 +14,9 @@ const Infos = ({
   const languagesArray = Object.keys(languages);
 
   return (
-    <article className="min-w-[20rem] mt-10 md:mt-0">
-      <h2 className="font-bold text-2xl max-md:my-5">{name.common}</h2>
-      <div className="md:flex gap-10 mt-10 md:flex-wrap md:flex-col lg:flex-row">
+    <article className="min-w-[20rem] lg:min-w-[30rem] mt-10 md:mt-0">
+      <h2 className="font-bold text-4xl max-md:my-5">{name.common}</h2>
+      <div className="md:flex mt-10 md:flex-col lg:flex-row lg:gap-20 2xl:gap-40">
         <div>
           <p>
             <span className="font-bold">Native Name: </span>
@@ -39,7 +39,7 @@ const Infos = ({
             {capital}
           </p>
         </div>
-        <div>
+        <div className="max-lg:mt-10">
           <p>
             <span className="font-bold">Top Level Domain: </span>
             {tld}
