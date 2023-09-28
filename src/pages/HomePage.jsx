@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "../components/Search";
-import Filter from "../components/Filter";
-import Cards from "../components/Cards";
+import Filter from "../components/Filter/Filter";
+import Cards from "../components/Cards/Cards";
 import { useLoaderData } from "react-router-dom";
 
 const HomePage = () => {

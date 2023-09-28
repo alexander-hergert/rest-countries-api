@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](/public/images/desktop-preview.jpg)
+![Design preview for the REST Countries API with color theme switcher coding challenge](/public/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -56,3 +56,9 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
+- [React Router](https://reactrouter.com/en/main/start/tutorial) - To navigate in SPAs
+- [TailwindCSS] (https://tailwindcss.com/docs/installation) - Perfect for React styling
+- [Daisy-UI](https://daisyui.com/docs/install/) - Built on TailwindCSS offers UI and themes setup
+- [Framer](https://www.framer.com/motion/introduction/) - Create animations easily
+- [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started) - Statemanagament library
+- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/usage/queries) - Fetching chaching library for Redux

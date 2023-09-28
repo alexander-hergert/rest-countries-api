@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
-import { changeFilter } from "../slices/filterSlice";
-import { initial, addFilter } from "../slices/filteredDataSlice";
+import { changeFilter } from "../../slices/filterSlice";
+import { initial, addFilter } from "../../slices/filteredDataSlice";
 import { useNavigate, useParams } from "react-router-dom";
 import FilterListItem from "./FilterListItem";
 

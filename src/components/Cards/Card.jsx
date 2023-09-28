@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fadeUp } from "../animations";
+import { fadeUp } from "../../animations";
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ flags, name, capital, population, region, index }) => {
