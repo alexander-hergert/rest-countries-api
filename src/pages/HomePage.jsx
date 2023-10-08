@@ -9,7 +9,7 @@ const HomePage = () => {
   const loaderData = useLoaderData(); //region
 
   return (
-    <section className="p-5 lg:px-[5%] 2xl:px-[10%]">
+    <section className="p-5 lg:px-[5%] 2xl:px-[10%] min-h-[100vh]">
       <section className="md:flex justify-between">
         <Search />
         <Filter />

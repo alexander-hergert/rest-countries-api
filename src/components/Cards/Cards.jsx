@@ -50,7 +50,8 @@ const Cards = ({ loaderData }) => {
     return (
       <section
         className="mt-10 rounded flex flex-col items-center md:flex-row flex-wrap 
-    md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 xl:gap-[3rem] justify-items-center"
+    md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 xl:gap-[3rem] 
+    justify-items-center"
       >
         {placeholderCountires?.map((placeholder, i) => (
           <CardPlaceholder key={i} {...placeholder} />
